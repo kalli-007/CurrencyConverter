@@ -96,3 +96,27 @@ h2, .App-link, label, div, input, select, button {
   from, to { border-color: transparent }
   50% { border-color: #b30000; }
 }
+
+@media (max-width: 700px) {
+  .App-header img {
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 98vw;
+    max-height: 40vh;
+  }
+  .App-header {
+    font-size: 1.1em;
+    padding: 10px;
+  }
+  input, select, button {
+    width: 90vw !important;
+    max-width: 300px;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  div[style*='margin: 20px'] {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    margin: 10px !important;
+  }
+}
