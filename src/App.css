@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
 .App {
   text-align: center;
 }
@@ -14,18 +16,67 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #b30000;
+  font-family: 'Share Tech Mono', monospace;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+input, select, button, h2, .App-link, div, label {
+  color: #b30000 !important;
+  border-color: #b30000 !important;
+  font-family: 'Share Tech Mono', monospace !important;
+}
+
+input, select, button {
+  background: #111;
+  border: 2px solid #b30000;
+  outline: none;
+  color: #b30000;
+  box-shadow: 0 0 10px #b3000055, 0 0 2px #b30000;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+button {
+  color: #b30000 !important;
+  border: 2px solid #b30000;
+  background: #111;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 0 10px #b3000055, 0 0 2px #b30000;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+input:focus, select:focus {
+  border-color: #b30000;
+  box-shadow: 0 0 20px #b30000;
+}
+
+/* Make error text red (already matches, but ensure specificity) */
+[style*='color: red'] {
+  color: #b30000 !important;
+}
+
+/* Remove blue autofill background in Chrome */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #111 inset;
+  -webkit-text-fill-color: #b30000;
+}
+
+/* Hacker-style glowing text */
+h2, .App-link, label, div, input, select, button {
+  text-shadow: 0 0 5px #b30000, 0 0 10px #b30000;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +86,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #b30000; }
 }
