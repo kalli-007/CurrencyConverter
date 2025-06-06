@@ -71,7 +71,7 @@ function App() {
       <header className="App-header">
         {/* Removed old logo and added a new image */}
         <img src={image} alt="hacker with mask" style={{ width: 500, height: 300, borderRadius: '50%', marginBottom: 20, filter: 'brightness(0.6)' }} />
-        <div style={{ fontSize: '1.1em', fontWeight: 'bold', marginBottom: 10, letterSpacing: '2px', userSelect: 'all' }}>kalli-007</div>
+        <div style={{ fontSize: '1.1em', fontWeight: 'bold', marginBottom: 10, letterSpacing: '2px', userSelect: 'all' }}>AGNYATHAVASI</div>
         <h2 style={{ whiteSpace: 'nowrap', overflow: 'hidden', borderRight: '2px solid #b30000', width: 'fit-content', animation: 'typing 2.5s steps(20, end), blink-caret 0.75s step-end infinite' }}>Currency Converter</h2>
         <div style={{ margin: '20px' }}>
           <label htmlFor="amount" style={{ display: 'none' }}>Amount</label>
