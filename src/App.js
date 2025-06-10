@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
 import image from './moneyheist.webp';
+import './App.css';
 
 // ResultDisplay component
 function ResultDisplay({ result, error, amount, fromCurrency, toCurrency }) {
