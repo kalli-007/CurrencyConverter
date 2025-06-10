@@ -73,31 +73,37 @@ function App() {
         <img src={image} alt="hacker with mask" style={{ width: 500, height: 300, borderRadius: '50%', marginBottom: 20, filter: 'brightness(0.6)' }} />
         <div style={{ fontSize: '1.1em', fontWeight: 'bold', marginBottom: 10, letterSpacing: '2px', userSelect: 'all' }}>AGNYATHAVASI</div>
         <h2 style={{ whiteSpace: 'nowrap', overflow: 'hidden', borderRight: '2px solid #b30000', width: 'fit-content', animation: 'typing 2.5s steps(20, end), blink-caret 0.75s step-end infinite' }}>Currency Converter</h2>
-        <div style={{ margin: '20px' }}>
-          <label htmlFor="amount" style={{ display: 'none' }}>Amount</label>
-          <input
-            id="amount"
-            type="number"
-            value={amount}
-            onChange={e => setAmount(e.target.value)}
-            min="0"
-            style={{ width: '100px', marginRight: '10px' }}
-            aria-label="Amount to convert"
-          />
-          <label htmlFor="from-currency" style={{ display: 'none' }}>From Currency</label>
-          <select id="from-currency" value={fromCurrency} onChange={e => setFromCurrency(e.target.value)} aria-label="From currency">
-            <option value="USD">USD</option>
-            <option value="INR">INR</option>
-            <option value="EUR">EUR</option>
-          </select>
-          <span style={{ margin: '0 10px' }}>to</span>
-          <label htmlFor="to-currency" style={{ display: 'none' }}>To Currency</label>
-          <select id="to-currency" value={toCurrency} onChange={e => setToCurrency(e.target.value)} aria-label="To currency">
-            <option value="USD">USD</option>
-            <option value="INR">INR</option>
-            <option value="EUR">EUR</option>
-          </select>
-          <button onClick={handleConvert} style={{ marginLeft: '10px' }} disabled={loading} aria-label="Convert">
+        <div className="currency-row" style={{ margin: '20px', display: 'flex', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <label htmlFor="amount" style={{ marginBottom: 4 }}>Amount</label>
+            <input
+              id="amount"
+              type="number"
+              value={amount}
+              onChange={e => setAmount(e.target.value)}
+              min="0"
+              style={{ width: '100px' }}
+              aria-label="Amount to convert"
+            />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <label htmlFor="from-currency" style={{ marginBottom: 4 }}>From</label>
+            <select id="from-currency" value={fromCurrency} onChange={e => setFromCurrency(e.target.value)} aria-label="From currency">
+              <option value="USD">USD</option>
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+          <span className="to-label-centered" style={{ fontWeight: 'bold', fontSize: '1.2em', margin: '0 5px', color: '#b30000', textShadow: '0 0 5px #b30000, 0 0 10px #b30000', alignSelf: 'flex-end' }}>to</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <label htmlFor="to-currency" style={{ marginBottom: 4 }}>To</label>
+            <select id="to-currency" value={toCurrency} onChange={e => setToCurrency(e.target.value)} aria-label="To currency">
+              <option value="USD">USD</option>
+              <option value="INR">INR</option>
+              <option value="EUR">EUR</option>
+            </select>
+          </div>
+          <button onClick={handleConvert} style={{ marginLeft: '10px', alignSelf: 'flex-end' }} disabled={loading} aria-label="Convert">
             {loading ? 'Converting...' : 'Convert'}
           </button>
         </div>

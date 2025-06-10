@@ -108,6 +108,19 @@ h2, .App-link, label, div, input, select, button {
     font-size: 1.1em;
     padding: 10px;
   }
+  .currency-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+  }
+  .to-label-centered {
+    margin: 10px 0 10px 0 !important;
+    font-size: 1.2em;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
   input, select, button {
     width: 90vw !important;
     max-width: 300px;
@@ -115,8 +128,40 @@ h2, .App-link, label, div, input, select, button {
     margin-bottom: 10px;
   }
   div[style*='margin: 20px'] {
+    display: flex !important;
     flex-direction: column !important;
     align-items: stretch !important;
     margin: 10px !important;
+  }
+  .mobile-to-label {
+    display: block !important;
+    text-align: left;
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #b30000;
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: 0 0 5px #b30000, 0 0 10px #b30000;
+  }
+  .desktop-to-label {
+    display: none !important;
+  }
+}
+
+@media (min-width: 701px) {
+  .currency-row {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  .to-label-centered {
+    display: inline !important;
+    width: auto;
+    margin: 0 5px !important;
+  }
+  .mobile-to-label {
+    display: none !important;
+  }
+  .desktop-to-label {
+    display: inline !important;
   }
 }
