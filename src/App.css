@@ -47,9 +47,9 @@ input, select, button {
 }
 
 button {
-  color: #b30000 !important;
+  color: black !important;
   border: 2px solid #b30000;
-  background: #111;
+  background:red;
   transition: background 0.2s, color 0.2s;
   box-shadow: 0 0 10px #b3000055, 0 0 2px #b30000;
 }
