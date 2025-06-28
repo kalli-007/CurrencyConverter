@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import image from './moneyheist.webp';
 import './App.css';
+import Footer from './Footer'; // Import Footer component
 
 // ResultDisplay component
 function ResultDisplay({ result, error, amount, fromCurrency, toCurrency }) {
@@ -110,6 +111,7 @@ function App() {
         <ResultDisplay result={result} error={error} amount={amount} fromCurrency={fromCurrency} toCurrency={toCurrency} />
         <ConversionHistory history={history} />
       </header>
+      <Footer />
     </div>
   );
 }
